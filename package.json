@@ -1,0 +1,38 @@
+{
+  "name": "nyaa-backend",
+  "version": "0.0.1",
+  "description": "Nyaa.se improvement replacement written in TypeScript (Doll.moe)",
+  "main": "index.js",
+  "repository": "https://github.com/maxsh8x/nyaa-backend.git",
+  "author": "neko@protonmail.ch",
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "tsc",
+    "start": "NODE_ENV=production node build/index.js",
+    "watch": "nodemon -w src -x ts-node src/index.ts",
+    "dev": "NODE_ENV=dev npm run watch",
+    "docker": "NODE_ENV=docker npm run watch"
+  },
+  "dependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/koa-bodyparser": "^3.0.23",
+    "@types/koa-router": "^7.0.22",
+    "@types/mongoose": "^4.7.11",
+    "@types/mongoose-sequence": "^3.0.1",
+    "kcors": "2.2.1",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.1.1",
+    "mongoose": "^4.9.8",
+    "mongoose-sequence": "^3.2.0",
+    "reflect-metadata": "^0.1.10",
+    "routing-controllers": "0.6.12",
+    "typedi": "^0.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.0.4",
+    "tslint": "^5.2.0",
+    "typescript": "^2.3.2"
+  }
+}
