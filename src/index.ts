@@ -12,8 +12,8 @@ import "./controllers/TorrentController"
 
 const config = getAppConfig();
 const koaApp = createKoaServer({
-  developmentMode: process.env.NODE_ENV !== "production",
-  enableValidation: true
+  development: process.env.NODE_ENV !== "production",
+  validation: true
 });
 
 const cors = require('kcors')
@@ -23,7 +23,7 @@ koaApp.on('error', (err: Error) => {
   console.error(err);
 });
 
-const db = mongoose.connect(config.mongoURI).connection
+const db = mongoose.connect(config.mongoDB.URI).connection
 db.once('open', () => {
   koaApp.listen(config.port);
   console.log(`Server is up and running at port ${config.port}`);

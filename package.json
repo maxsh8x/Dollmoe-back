@@ -14,11 +14,13 @@
     "docker": "NODE_ENV=docker npm run watch"
   },
   "dependencies": {
+    "@types/elasticsearch": "^5.0.13",
     "@types/koa": "^2.0.39",
     "@types/koa-bodyparser": "^3.0.23",
     "@types/koa-router": "^7.0.22",
     "@types/mongoose": "^4.7.11",
     "@types/mongoose-sequence": "^3.0.1",
+    "elasticsearch": "^13.0.1",
     "kcors": "2.2.1",
     "koa": "^2.2.0",
     "koa-bodyparser": "^4.2.0",
@@ -26,7 +28,7 @@
     "mongoose": "^4.9.8",
     "mongoose-sequence": "^3.2.0",
     "reflect-metadata": "^0.1.10",
-    "routing-controllers": "0.6.12",
+    "routing-controllers": "^0.7.0",
     "typedi": "^0.5.1"
   },
   "devDependencies": {
